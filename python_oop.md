@@ -1,6 +1,6 @@
 # Python
 
-## Basic and My Superstition
+## Basics and My Superstitions
 
 * **Object-oriented and multi-paradigm.** Everything in Python is an object, including classes and functions. Functions can be passed as arguments, returned from other functions, and assigned to variables. This supports functional programming and metaprogramming techniques such as decorators (e.g., `@staticmethod`).
 
@@ -55,10 +55,10 @@
 
 * **Variable-length arguments.** `*args` collects positional arguments into a tuple. `**kwargs` collects keyword arguments into a dictionary.
 
-    ```python
-    def function(arg1, *args, arg2=None, **kwargs):
-        ...
-    ```
+```python
+def function(arg1, *args, arg2=None, **kwargs):
+    ...
+```
 
 * Dictionary methods such as `.get(key, default)` and `.pop(key, default)` can be used to access or remove values with an optional default.
 
@@ -78,12 +78,10 @@
     * The package's `__init__.py` controls what is initialized when the package itself is imported.
     * Add to the module search path
         
-        ```python
+    ```python
         import os, sys
         sys.path.append(os.path.abspath(os.path.join(__file__, "..")))
     ```
-
-
 
 ## Controlling
 
@@ -383,11 +381,17 @@ ClassName.methodname(self, ...)
     class B(A):
         pass
 
+    class C(A):
+        pass
+
     class M_mixin():
         def show_name(self):
         print("The name = ", self.name)
 
-    class C(B, M_mixin):
+    class D(B, M_mixin):
+        pass
+
+    class E(C, M_mixin):
         pass
 
     if __name__ == "__main__":
