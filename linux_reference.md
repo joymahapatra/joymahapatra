@@ -89,6 +89,13 @@ tar -xvzf archive.tar.gz
 
 * `setfacl -m u:<USERNAME>:rwx <DIRECTORY>` — Grant access to a directory.
 
+## Set the New Hostname
+
+	> ```sh
+	> hostnamectl status # check hos
+	> sudo hostnamectl set-hostname new-pc-name
+	> sudo nano /etc/hosts # Change name corresponding to `127.0.1.1`
+	> ```
 
 ##  Building Software from Source (GNU Autotools)
 
@@ -110,26 +117,6 @@ screen -ls
 # Detach a session: `ctrl+ a` and `ctrl+ d`
 screen -r session_name # attach a screen session
 screen -d -r session_name # force reattach
-```
-
-## Git help
-
-```sh
-vim ~/.gitconfig # global
-vim ~/.git-credentials # check all credentials
-git config --global user.name "John Doe" # global name set
-git config --global user.email "johndoe@gmail.com"
-git config --global --get user.name
-git config --global --get user.email
-git config --global credential.helper store # to store
-git log # check status by `git status`
-git remote -v
-git remote add origin [REMOTE_URL]
-git branch -a # or, git branch --all
-git checkout [BRANCH_NAME]
-git merge [BRANCH_NAME]
-git commit -m "TYPE_MESSAGE"
-git push origin [BRANCH_NAME]
 ```
 
 ## SSH Configuration: Add the following entries to `~/.ssh/config`
